@@ -14,6 +14,9 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component'; // <-- NgModel lives here
 
+import { HeroService } from 'src/app/hero.service';
+
+
 
 @NgModule({
   declarations: [
@@ -35,7 +38,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component'; // <-
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
   ],
   providers: [],
   bootstrap: [AppComponent]
